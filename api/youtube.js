@@ -1,4 +1,4 @@
-import { youtube } from "btch-downloader";
+const { youtube } = require("btch-downloader");
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
