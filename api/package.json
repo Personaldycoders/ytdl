@@ -1,0 +1,11 @@
+{
+  "name": "youtube-downloader",
+  "version": "1.0.0",
+  "description": "YouTube downloader with frontend and backend on Vercel.",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "btch-downloader": "^1.0.0"
+  }
+}
