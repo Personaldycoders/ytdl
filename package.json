@@ -2,6 +2,7 @@
   "name": "youtube-downloader",
   "version": "1.0.0",
   "description": "YouTube downloader with frontend and backend on Vercel.",
+  "type": "module",  // Menambahkan "type": "module" untuk mendukung ESM
   "scripts": {
     "start": "vercel dev"
   },
