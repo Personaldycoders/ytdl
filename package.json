@@ -6,7 +6,8 @@
     "start": "vercel dev"
   },
   "dependencies": {
-    "btch-downloader": "^1.0.0"
+    "btch-downloader": "^1.0.0",
+    "node-fetch": "^3.0.0"
   },
   "engines": {
     "node": "16.x"

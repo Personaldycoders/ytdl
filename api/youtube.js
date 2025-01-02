@@ -1,6 +1,7 @@
-const { youtube } = require("btch-downloader");
+const { youtube } = require('btch-downloader'); // Menggunakan require untuk btch-downloader
+const fetch = require('node-fetch'); // Menggunakan require untuk node-fetch
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -12,10 +13,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    console.log('Fetching data for URL:', url); // Log URL yang diterima
+    console.log('Fetching data for URL:', url);
     const result = await youtube(url);
 
-    // Log hasil dari API untuk memastikan response
     console.log('Result:', result);
 
     return res.status(200).json({
@@ -33,11 +33,11 @@ export default async function handler(req, res) {
       },
     });
   } catch (error) {
-    console.error('Error occurred:', error); // Log error untuk debugging
+    console.error('Error occurred:', error);
 
     return res.status(500).json({
       success: false,
       error: error.message || 'Something went wrong',
     });
   }
-}
+};
