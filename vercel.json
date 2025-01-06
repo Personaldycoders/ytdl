@@ -2,21 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/**/*.js",
+      "src": "api/youtube.js",    // Backend (API) hanya untuk youtube.js
       "use": "@vercel/node"
     },
     {
-      "src": "pages/**/*.js",
+      "src": "pages/**/*.js",     // Frontend di folder /pages
       "use": "@vercel/next"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "src": "/api/youtube",      // Semua request ke /api/youtube akan diarahkan ke api/youtube.js
+      "dest": "/api/youtube.js"
     },
     {
-      "src": "/(.*)",
+      "src": "/(.*)",              // Semua request lainnya akan diarahkan ke frontend di /pages
       "dest": "/pages/$1"
     }
   ]
