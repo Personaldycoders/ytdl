@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "btch-downloader": "^latest",
+    "btch-downloader": "^2.8.1",
     "next": "^13.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
