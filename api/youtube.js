@@ -1,5 +1,6 @@
 const { youtube } = require('btch-downloader');
 const cheerio = require('cheerio');
+const got = require('got');
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
