@@ -5,7 +5,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { url } = req.body;
+  // Membaca URL dari query parameter atau body
+  const { url } = req.query || req.body;
 
   if (!url) {
     return res.status(400).json({ error: 'You must provide a URL' });
