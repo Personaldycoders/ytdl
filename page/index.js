@@ -7,11 +7,9 @@ export default function App() {
 
   const handleDownload = async () => {
     try {
-      // Menambahkan query parameter '?url=' di URL API
+      // Menggunakan GET dan menambahkan query parameter '?url='
       const response = await fetch(`/api/youtube?url=${encodeURIComponent(url)}`, {
-        method: 'POST', // Tetap POST
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url }), // Kirim URL dalam body, meskipun sudah ada di query string
+        method: 'GET', // Menggunakan GET, bukan POST
       });
 
       if (!response.ok) throw new Error('Failed to fetch data');

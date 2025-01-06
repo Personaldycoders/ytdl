@@ -1,12 +1,12 @@
 const { youtube } = require('btch-downloader');
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Membaca URL dari query parameter atau body
-  const { url } = req.query || req.body;
+  // Membaca URL dari query parameter
+  const { url } = req.query;
 
   if (!url) {
     return res.status(400).json({ error: 'You must provide a URL' });
