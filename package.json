@@ -2,7 +2,7 @@
   "name": "youtube-downloader",
   "version": "1.0.0",
   "description": "A YouTube downloader API using btch-downloader",
-  "main": "index.js",
+  "main": "./page/index.js",
   "scripts": {
     "dev": "vercel dev",
     "build": "next build",
