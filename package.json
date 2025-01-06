@@ -1,15 +1,23 @@
 {
   "name": "youtube-downloader",
   "version": "1.0.0",
-  "description": "YouTube downloader with frontend and backend on Vercel.",
+  "description": "A YouTube downloader API using btch-downloader",
+  "main": "index.js",
   "scripts": {
-    "start": "vercel dev"
+    "dev": "vercel dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "btch-downloader": "^1.0.0",
-    "node-fetch": "^3.0.0"
+    "btch-downloader": "^latest",
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
-  "engines": {
-    "node": "16.x"
-  }
+  "devDependencies": {
+    "vercel": "^28.0.0"
+  },
+  "keywords": ["youtube", "downloader", "api", "vercel"],
+  "author": "Your Name",
+  "license": "MIT"
 }
